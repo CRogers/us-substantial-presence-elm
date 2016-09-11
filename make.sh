@@ -2,4 +2,4 @@
 
 set -eu
 
-elm make src/Main.elm
+elm make --yes --output build/index.html src/Main.elm
