@@ -1,0 +1,28 @@
+machine:
+  node:
+    version: 6.1.0
+  environment:
+    TERM: dumb
+
+general:
+  branches:
+    ignore:
+      - gh-pages
+
+dependencies:
+  override:
+    - npm install -g elm
+    - elm make --yes
+  cache_directories:
+    - elm-stuff/build-artifacts
+
+test:
+  override:
+    - ./make.sh
+
+deployment:
+  master:
+    branch: master
+    owner: CRogers
+    commands:
+      - ./scripts/deploy-gh-pages.sh
