@@ -12,6 +12,9 @@ general:
 dependencies:
   override:
     - npm install -g elm
+    - elm package install --yess
+  cache_directories:
+    - elm-stuff
 
 test:
   override:
