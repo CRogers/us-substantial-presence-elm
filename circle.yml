@@ -12,7 +12,7 @@ general:
 dependencies:
   override:
     - npm install -g elm
-    - elm package install --yes
+    - elm make --yes
   cache_directories:
     - elm-stuff/build-artifacts
 
